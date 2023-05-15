@@ -9,3 +9,6 @@ def sensor_data_to_average():
         return "Stop"
     else:
         return "Continue"
+def sensor_data_check():
+    if len(sensor_data) > 20:
+        sensor_data.pop(0)
