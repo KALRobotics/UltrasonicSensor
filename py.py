@@ -12,3 +12,9 @@ def sensor_data_to_average():
 def sensor_data_check():
     if len(sensor_data) > 20:
         sensor_data.pop(0)
+
+        
+def collect_sensor_data(data_point):
+    sensor_data.append(data_point)
+    sensor_data_check()
+    collected.append(sensor_data_to_average())
